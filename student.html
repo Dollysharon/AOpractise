@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fieldset with Legend Example</title>
+
+
+
+  <style>
+
+
+ body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    form {
+      background-color: white;
+      padding: 20px 40px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+    }
+
+    fieldset {
+      border: 2px solid #999;
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    legend {
+      font-weight: bold;
+      font-size: 18px;
+      padding: 0 10px;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: teal;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: darkcyan;
+    }
+
+
+
+
+  </style>
+</head>
+<body>
+
+  <h2>STUDENT INFORMATION</h2>
+
+  <form>
+    <fieldset>
+      <legend>STUDENT::</legend>
+
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name"><br><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email"><br><br>
+
+      <label for="dob">Date of birth:</label><br>
+      <input type="date" id="dob" name="dob"><br><br>
+
+      <label for="address">Address:</label><br>
+      <input type="text" id="address" name="address"><br><br>
+
+      <label for="enroll">Enroll No:</label><br>
+      <input type="text" id="enroll" name="enroll"><br><br>
+
+
+       <button type="submit">Submit</button>
+    </fieldset>
+  </form>
+
+</body>
+</html>
