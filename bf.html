@@ -1,18 +1,206 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday, Love!</title>
   <style>
-    body { background-color: pink; font-family: cursive; text-align: center; padding: 50px; }
-    h1 { color: red; }
-    a { color: purple; font-weight: bold; text-decoration: none; }
+    body {
+      background: linear-gradient(135deg, #001f3f, #0074D9);
+      color: white;
+      font-family: 'Comic Sans MS', cursive;
+      text-align: center;
+      padding: 60px 20px;
+      min-height: 100vh;
+    }
+
+    h1 {
+      color: #00cfff;
+      font-size: 3em;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    p {
+      font-size: 1.5em;
+      margin: 20px 0;
+    }
+
+    a {
+      color: #ffccff;
+      font-weight: bold;
+      text-decoration: none;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 10px 20px;
+      border-radius: 15px;
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #ffffff33;
+      color: #ffffff;
+    }
+
+    .slideshow-container {
+      position: relative;
+      max-width: 300px;
+      margin: auto;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 20px #00000088;
+    }
+
+    .slides {
+      display: none;
+      width: 100%;
+      border-radius: 20px;
+    }
+
+    .gift-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .gift-button {
+      background-color: #005f99;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 15px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .gift-button:hover {
+      background-color: #0088cc;
+    }
+
+    #selection, #secretGift {
+      margin-top: 25px;
+      font-size: 1.2em;
+      color: #ffccff;
+      white-space: pre-line;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    form {
+      margin-top: 40px;
+    }
+
+    select, input[type="email"] {
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 1em;
+      border: none;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
-  <h1>💕</h1>
-  <p>You are the source code to my heart.</p>
-  <p><a href="https://youtu.be/5gg17XXXiNo?si=byQ8yNR2Yb_DZuXg" target="_blank">Click here for a surprise 🎶</a></p>
 
-  
+  <!-- Slideshow -->
+  <div class="slideshow-container">
+    <img class="slides" src="Assets/us1.jpg" alt="Us">
+    <img class="slides" src="Assets/us2.jpg" alt="Smile">
+    <img class="slides" src="Assets/us4.jpg" alt="Memories">
+    <img class="slides" src="Assets/us5.jpg" alt="Memories">
+  </div>
+
+  <!-- Title and Message -->
+  <h1>💕 Happy Birthday, My Love 💕</h1>
+  <p>You are the source code to my heart, the melody in my silence, and the peace in my storm. 💙</p>
+  <p><a href="https://youtu.be/T-doQhcwDS8?si=wDsoSXPTeNtBFC6s" target="_blank">Click here for your surprise 🎶</a></p>
+
+  <!-- Real Formspree Form -->
+  <form action="https://formspree.io/f/xqabqzpe" method="POST">
+    <p style="font-size: 1.2em;">Pick your birthday gift and submit it below 🎁</p>
+    
+    <select name="gift" required>
+      <option value="">-- Select a Gift --</option>
+      <option value="🪑 Reserved Seat in My Heart">🪑 Reserved Seat in My Heart</option>
+      <option value="📜 A Jar of Handwritten Love Notes">📜 A Jar of Handwritten Love Notes</option>
+      <option value="🎧 A Playlist of “Us” Songs">🎧 A Playlist of “Us” Songs</option>
+      <option value="🔥 Play Card Deck: Naughty Positions">🔥 Play Card Deck: Naughty Positions</option>
+      <option value="✨ Mystery Box">✨ Mystery Box</option>
+      <option value="🗺️ A Personalized Adventure Date Plan">🗺️ A Personalized Adventure Date Plan</option>
+    </select><br>
+
+    <input type="email" name="email" placeholder="Your email (optional)"><br><br>
+
+    <button type="submit" class="gift-button">Submit Gift Choice 💌</button>
+  </form>
+
+  <!-- Buttons for Fun -->
+  <div class="gift-buttons">
+    <button class="gift-button" onclick="selectGift('🪑 Reserved Seat in My Heart')">🪑 Reserved Seat in My Heart</button>
+    <button class="gift-button" onclick="selectGift('Love Letters 📜')">📜 A Jar of Handwritten Love Notes</button>
+    <button class="gift-button" onclick="selectGift('Custom Playlist 🎧')">🎧 A Playlist of “Us” Songs</button>
+    <button class="gift-button" onclick="selectGift('Play Card Deck 🔥♠️')">🔥 Play Card Deck: Naughty Positions</button>
+    <button class="gift-button" onclick="selectGift('Mystery Box ✨')">✨ Mystery Box</button>
+    <button class="gift-button" onclick="selectGift('Adventure Plan 🗺️')">🗺️ A Personalized Adventure Date Plan</button>
+  </div>
+  <div id="selection"></div>
+
+  <!-- Romantic Note -->
+  <p style="margin-top: 40px; font-size: 1.3em; color: #ffccff;">
+    I wish I could kiss you at midnight, laugh over cake with you, and fall asleep in your arms tonight…  
+    But for now, know this — I am wrapping myself in thoughts of you.  
+    You deserve the kind of love that’s handwritten on skin and whispered in the dark.  
+  </p>
+
+  <!-- Tease for Hidden Gift -->
+  <p style="margin-top: 30px; font-size: 1.2em; color: #ffccff;">
+    PS: One special gift isn’t on the list… it’s invisible, personal, and from the depths of my heart. 💌  
+  </p>
+
+  <!-- Reveal Button -->
+  <button onclick="revealSecret()" class="gift-button" style="background-color: #880e4f;">Reveal Hidden Gift 🔐</button>
+  <div id="secretGift"></div>
+
+  <!-- Scripts -->
+  <script>
+    let slideIndex = 0;
+    const slides = document.getElementsByClassName("slides");
+
+    function showSlides() {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1; }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000);
+    }
+
+    showSlides();
+
+    function selectGift(gift) {
+      let message = `🎉 Yay! You chose: ${gift}\nTake a screenshot and send it to me ❤️`;
+
+      if (gift.includes("Play Card")) {
+        message += `\nEach card = a surprise position… think Queen of Tease, Ace of Bends, and Joker of Joy 😘🎴`;
+      }
+
+      document.getElementById("selection").innerText = message;
+    }
+
+    function revealSecret() {
+      const password = prompt("Enter the secret word I told you...");
+      if (password === "babyRoo") {
+        document.getElementById("secretGift").innerHTML =
+          "📸 Your hidden gift is a private boudoir portrait of me styled, captured, and framed just for your eyes. Sensual, tasteful, and 100% yours. When we meet… you’ll get to hold more than just the picture. 💌";
+      } else {
+        document.getElementById("secretGift").innerHTML =
+          "❌ Wrong password... Maybe I’ll whisper it next time we call 😘";
+      }
+    }
+  </script>
+
 </body>
 </html>
-
